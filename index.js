@@ -5,7 +5,7 @@ var DataStore = require("nedb");
 var BASE_API_PATH = "/api/v1";
 var dbFileName = __dirname + "/contacts.json";
 
-console.log("Starting server...");
+console.log("Starting API server...");
 
 var app = express();
 app.use(bodyParser.json());
