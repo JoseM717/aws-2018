@@ -10,25 +10,27 @@
     </head>
     <body ng-controller="ListCtrl">
         <h1>Contacts</h1> 
-        <table class="table">
-            <thead>
+        <form name="contactForm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>&nbsp;</th>
+                    <td><input class="form-control" ng-model="newContact.name"></td>
+                    <td><input name="phone" class="form-control" ng-model="newContact.phone" required ng-pattern="/^[0-9]+$/" ng-class="{'is-invalid': !contactForm.$valid}"></td>
+                    <td><button class="btn btn-primary" ng-click="addContact()" ng-disabled="!contactForm.$valid">Add Contact</button> </td>
                 </tr>
-            </thead>
-            <tr>
-                <td><input class="form-control" ng-model="newContact.name"></td>
-                <td><input class="form-control" ng-model="newContact.phone"></td>
-                <td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button> </td>
-            </tr>
-
-            <tr ng-repeat="contact in contacts">
-                <td>{{contact.name}}</td>
-                <td>{{contact.phone}}</td>
-            </tr>
-        </table>
+    
+                <tr ng-repeat="contact in contacts">
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.phone}}</td>
+                </tr>
+            </table>
+        </form>
         <h5><a href="https://documenter.getpostman.com/view/359472/aws1718/RVnTmM8k">api documentation</a></h5>
     </body>
 </html>
