@@ -9,7 +9,7 @@
   },
   "repository":{
       "type": "git",
-      "url": "git://github.com/JoseM717/aws-2018.git"
+      "url": "git://github.com/JoseM717/aws-2018.git",
       "github": "https://github.com/JoseM717/aws-2018"
   },
   "author": "",
