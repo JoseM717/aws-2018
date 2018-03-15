@@ -7,6 +7,11 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository":{
+      "type": "git",
+      "url": "git://github.com/JoseM717/aws-2018.git"
+      "github": "https://github.com/JoseM717/aws-2018"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
